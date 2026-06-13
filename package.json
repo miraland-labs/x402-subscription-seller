@@ -21,7 +21,8 @@
     "prepublishOnly": "npm run build && npm test"
   },
   "dependencies": {
-    "jsonwebtoken": "^9.0.3"
+    "jsonwebtoken": "^9.0.3",
+    "jwks-rsa": "^3.2.0"
   },
   "peerDependencies": {
     "express": "^4.21.0"

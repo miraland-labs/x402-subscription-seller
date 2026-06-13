@@ -61,6 +61,16 @@ Middleware returns JSON `{ error, message, subscribeUrl?, persistenceHint? }` wi
 - `403` — `TOKEN_SCOPE_MISMATCH` (opt-in via `requireResources`)
 - `429` — rate limits (seller-owned; not emitted by this SDK)
 
+## Tier B (`subscription-auth`)
+
+Hosted RS256 path (pairs with [subscription-auth](../subscription-auth/)):
+
+- `verifyTokenWithJwks(token, { jwksUrl, expectedIss, expectedSub })`
+- `RevocationPollCache` — 60s poll, fail-open (see revocation feed spec)
+- `issueTokenViaAuthService({ baseUrl, merchantWallet, signMessage, ... })`
+
+Starter demo: `SUBSCRIPTION_MODE=tier-b` in [x402-subscription-starter](../x402-subscription-starter/).
+
 ## License
 
 MIT

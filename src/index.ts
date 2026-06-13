@@ -45,3 +45,22 @@ export { requireBearer } from './middleware/require-bearer.js';
 
 export type { RequireResourcesOptions } from './middleware/require-resources.js';
 export { requireResources } from './middleware/require-resources.js';
+
+export type { JwksDocument, JwksCacheOptions } from './jwks.js';
+export { fetchJwks, getJwks, clearJwksCache, findJwkForKid } from './jwks.js';
+
+export type { VerifyTokenWithJwksOptions } from './token-rs256.js';
+export { verifyTokenWithJwks } from './token-rs256.js';
+
+export type {
+  RevocationFeedResponse,
+  RevocationPollOptions,
+} from './revocation-feed.js';
+export { RevocationPollCache, createRevocationPollCache } from './revocation-feed.js';
+
+export type {
+  SignMessageFn,
+  IssueViaAuthServiceOptions,
+  AuthServiceIssueResult,
+} from './auth-client.js';
+export { fetchIssueChallenge, issueTokenViaAuthService } from './auth-client.js';
