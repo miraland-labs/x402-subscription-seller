@@ -63,13 +63,13 @@ Middleware returns JSON `{ error, message, subscribeUrl?, persistenceHint? }` wi
 
 ## Tier B (`subscription-auth`)
 
-Hosted RS256 path (pairs with [subscription-auth](../subscription-auth/)):
+Hosted RS256 path (pairs with [subscription-auth](https://github.com/miralandlabs/subscription-auth)):
 
 - `verifyTokenWithJwks(token, { jwksUrl, expectedIss, expectedSub })`
 - `RevocationPollCache` — 60s poll, fail-open (see revocation feed spec)
 - `issueTokenViaAuthService({ baseUrl, merchantWallet, signMessage, ... })`
 
-Starter demo: `SUBSCRIPTION_MODE=tier-b` in [x402-subscription-starter](../x402-subscription-starter/).
+Starter demo: `SUBSCRIPTION_MODE=tier-b` in [x402-subscription-starter](https://github.com/miraland-labs/x402-seller-starter).
 
 ## License
 
